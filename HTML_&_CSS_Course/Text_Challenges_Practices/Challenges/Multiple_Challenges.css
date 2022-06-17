@@ -1,0 +1,261 @@
+/*=================================================
+    Challenge 1
+===================================================*/
+html {
+    background-color: bisque;
+    text-align: center;
+}
+
+p {
+    padding: 5%;
+}
+
+p:hover {
+    color: blue;
+}
+
+.container {
+    background-color: rgb(197, 153, 86);
+    margin: 35px 15px;
+    border-radius: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: 92%;
+}
+
+.Chall-1 img {
+    width: 20%;
+    height: 20%;
+    animation: mymove 7s infinite;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes mymove {
+    50% {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+}
+
+
+/*=================================================
+Challenge 2
+===================================================*/
+
+footer {
+    text-align: left;
+    font-weight: bold;
+    background-color: rgb(197, 153, 86);
+    border-radius: 5px;
+    margin: 0px 0px;
+    text-align: center;
+}
+
+footer h1 {
+    padding-top: 5px;
+    text-align: center;
+}
+
+/*=================================================
+Challenge 3
+===================================================*/
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+}
+
+
+table,
+td,
+th,
+tr {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px double black;
+}
+
+th,
+td {
+    padding: 20px;
+    max-width: 100%;
+    width: auto;
+    white-space: nowrap;
+    text-size-adjust: 100%;
+}
+
+th {
+    background-color: aqua;
+}
+
+td {
+    background-color: bisque;
+}
+
+/*=================================================
+    Challenge 4
+===================================================*/
+
+.image {
+    position: relative;
+    width: 30%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 2.50s;
+}
+
+.overlay>* {
+    transform: translateY(20px);
+    transition: transform 1.50s;
+}
+
+.overlay:hover {
+    opacity: 100%;
+}
+
+.overlay:hover>* {
+    transform: translateY(0px);
+}
+
+.overlay h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 1.25em;
+    margin-top: -1em;
+    color: white;
+}
+
+/*=================================================
+    Challenge 5
+===================================================*/
+
+.menu-container {
+    max-height: 340px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    text-align: left;
+    top: 0;
+    left: 0%;
+}
+
+.menu {
+    list-style: none;
+    color: white;
+    display: inline;
+    padding: 0;
+    text-decoration: none;
+}
+
+.menu li {
+    color: black;
+    background-color: aqua;
+    display: inline-block;
+    margin: 0% auto;
+    position: relative;
+    padding: 15px 4%;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.menu li:hover {
+    color: red;
+}
+
+/*==========================================================
+    Challenge 6
+============================================================*/
+
+.column {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+span {
+    color: antiquewhite;
+}
+
+/*=================================================================
+    Challenge 9 and 10
+===================================================================*/
+
+.vid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*background: #333;*/
+    background: rgba(0, 0, 0, 0.55); 
+    /*background-image: linear-gradient(
+                                      90deg, 
+                                      rgba(255,0,0,.35), 
+                                      rgba(0,0,255,.35)); */
+    color: rgb(108, 255, 94);
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+}
+
+.vid h2 {
+    font-family: ShrikHand, Georgia, 'Times New Roman', Times, serif;
+    font-size: 5em;
+    letter-spacing: .50em;
+}
+
+.video-bg {
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+@font-face {
+    font-family: ShrikHand;
+    src: url(fonts/Shrikhand-Regular.ttf);
+}
+
+
