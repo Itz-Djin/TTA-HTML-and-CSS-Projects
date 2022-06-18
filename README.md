@@ -1,6 +1,6 @@
 ## HTML and CSS Projects
 -[HTML/CSS Projects](https://github.com/Itz-Djin/Tech-Academy-Projects/tree/main/HTML_%26_CSS)
-This is a display of sample webistes as well as my portfolio website that I made using HTML and CSS.
+This repo holds HTML and CSS projects I've worked on with The Tech Academy, below follow the links to the various projects. 
 ### Projects
 - [My Portfolio]
 - [Movie Theater Site]
