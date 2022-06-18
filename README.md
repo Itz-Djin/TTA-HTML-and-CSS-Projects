@@ -1,9 +1,9 @@
 ## HTML and CSS Projects
 This repo holds HTML and CSS projects I've worked on with The Tech Academy, below follow the links to the various projects. 
 ### Projects
-- [My Portfolio]()
+- [My Portfolio](https://github.com/Itz-Djin/TTA-HTML-and-CSS-Projects/tree/main/HTML_%26_CSS_Course/Portfolio_Website)
 - [Movie Theater Site]()
-- [Vinyl One Page Site]()
+- [Vinyl One Page Site](https://github.com/Itz-Djin/TTA-HTML-and-CSS-Projects/tree/main/HTML_%26_CSS_Course/One-Page_Website)
 - [Space Station Site]()
 #### My Portfolio
 This page is the code to my portfolio website containing HTML and CSS. 
