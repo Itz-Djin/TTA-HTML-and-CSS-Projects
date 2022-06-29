@@ -113,7 +113,7 @@
         <!--Ghost in the Shell Card-->
         <div class="card">
           <figure class=".img-fluid">
-          <img class="card-img-top" src="img/ghostintheshell.jpg" alt="Card image cap" style="height: 250px;">
+            <img class="card-img-top" src="img/ghostintheshell.jpg" alt="Card image cap" style="height: 250px;">
           </figure>
           <div class="card-body">
             <h5 class="card-title">Ghost in the Shell</h5>
@@ -137,7 +137,7 @@
         <!--Beauty and the Beast Card-->
         <div class="card">
           <figure class=".img-fluid">
-          <img class="card-img-top" src="img/beautyandthebeast.jpg" alt="Card image cap" style="height: 250px;">
+            <img class="card-img-top" src="img/beautyandthebeast.jpg" alt="Card image cap" style="height: 250px;">
           </figure>
           <div class="card-body">
             <h5 class="card-title">Beauty and the Beast</h5>
@@ -162,18 +162,81 @@
     </div>
     <!-- /SHOWTIMES -->
 
-    <!--DEALS-->
-    <div class="text-center" id="Deals">
-      <form>
-        <h1 class="text-primary my-5">Sign up for Movie Club Rewards</h1>
-        <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter email">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    <!-- Jumbotron Heading -->
+    <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+      <div class="container">
+        <h1 class="display-4 hidden-sm-down"
+          style="color:#fff; font-family:roboto; font-weight:900; text-transform:uppercase;">
+          Movie Deals</h1>
+        <p class="lead">Check out our monthly deals...</p>
+        <!-- Movie Deals -->
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">See our
+          monthly movie deals!</button>
+        <!-- /Movie Deals -->
+      </div>
     </div>
-    <!--DEALS-->
+    <!-- /Jumbotron Heading -->
+
+    <!-- Signup form -->
+    <div class="row">
+      <div class="container text-center col-and-6" id="deals">
+        <div class="container text-center">
+          <h1 class="display-5 my-4 col-lg-auto text-primary">Stay current on movies!</h1>
+          <div class="input-group mb-5 input-group-sm">
+            <input type="text" class="form-control" placeholder="Email">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body"
+                data-toggle="popover" data-placement="top"
+                data-content="Submit your email to receive great movie reward deals!">
+                Sign up
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Signup form -->
+
+    <!-- Form Modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="register">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Register to receive movie deals!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <fieldset class="form-group">
+                  <label for="firstname">First Name:</label>
+                  <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+              </fieldset>
+              <fieldset class="form-group">
+                  <label for="lastname">Last Name:</label>
+                  <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+              </fieldset>
+              <fieldset class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email...">
+              </fieldset>
+              <fieldset class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password...">
+              </fieldset>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Form Modal -->
 
     <!--FOOTER-->
     <div class="container my-5 badge-info">
@@ -193,11 +256,6 @@
       </ul>
     </div>
     <!--FOOTER-->
-
-
-
-
-
   </div>
 
   <!-- Optional JavaScript -->
@@ -211,6 +269,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+
+  <script>
+    //Creates a popup menu on the side (right) of the selected element
+    $('.popover-dismiss').popover({
+      trigger: 'focus'
+    })
+  </script>
 </body>
 
 </html>
