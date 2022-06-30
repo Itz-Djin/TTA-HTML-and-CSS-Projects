@@ -11,10 +11,10 @@ body {
     margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
     opacity: 1; /* This and transition affect the page loading fade in effect */
     transition: 3s opacity; /* Causes a 3 second fade in */
-    letter-spacing: 2vw;
+    letter-spacing: .2vw;
     font-family: Avant Garde, Helvetica;
     font-size: 1.5vw;
-    overflow-x: none; /* prevents horizontal scroll bar from appearing when the quote is hovered over */
+    overflow-x: hidden; /* prevents horizontal scroll bar from appearing when the quote is hovered over */
     user-select: none; /* prevents text on webpage from being highlighted by user */
 }
 
@@ -45,6 +45,8 @@ h1:hover {
 /* Styling for portfolio title text */
 .white-text {
     color: #fff;
+    padding-top: 20vh;
+    font-size: 4.5vw;
 }
 
 .line {
@@ -79,16 +81,13 @@ p:hover {
 
 /*Center class - this applies to all elements with the class "center" */
 .center {
-    text-align: center;
-    /*This center aligns the text */
+    text-align: center; /*This center aligns the text */
 }
 
 /* Center class hover effect - this only affects the quote, github link, and fotter */
 .center:hover {
-    transition: transform 2s;
-    /* This makes the transform effect last 2 seconds */
-    transform: scale(1.1);
-    /*This makes the elements with class "center" increase in size by 1.1 when hovered over */
+    transition: transform 2s; /* This makes the transform effect last 2 seconds */
+    transform: scale(1.1); /*This makes the elements with class "center" increase in size by 1.1 when hovered over */
 }
 
 /* Anchor elements */
@@ -264,64 +263,60 @@ footer {
 
 /* Formatting for background video */
 #Typing_Video {
-    position: fixed;
-    /* This fixes the video to the page */
-    right: 0;
-    /* This ensures there is no space between the edge of the video and the edge of the page */
-    bottom: 0;
-    /* This ensures no space between the bottom of the video and the obttom of the page */
-    min-width: 100%;
-    /* This ensures the video is displayed across the full width of the page */
-    z-index: -1;
-    /* This places the video behind the other elements on the page */
+    position: fixed; /* This fixes the video to the page */
+    left: 50%; /* This ensures there is no space between the edge of the video and the edge of the page */
+    top: 50%; /* This ensures no space between the top of the video and the obttom of the page */
+    z-index: -1; /* This places the video behind the other elements on the page */
+    transform: translate(-50%, -50%);
 }
 
-/* Screens that ar 576px and smaller will not display the background video */
-@media screen and (max-width: 576px) {
+@media (min-aspect-ratio: 16/9) {
+    #Typing_Video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #Typing_Video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* Screens that are 767px and smaller will not display the background video */
+@media screen and (max-width: 767px) {
     #Typing_Video {
         display: none;
+    }
+    body {
+        background: url('../images/snippet1646x925.jpg');
     }
 }
 
 /* Texts over the video */
 .Video_Text {
-    background: #caeffe41;
-    /* This provides a sem-transparent background for the text to sit over */
-    color: white;
-    /* Makes the font color white */
-    width: 100%;
-    /* Ensures teh video-text container fils the width of the video */
-    padding: 20px;
-    /* This adds padding around the video-text container so that the background goes slightly beyond the text */
-    position: relative;
-    /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75s;
+    background: rgba(0, 0, 0, 0.3); /* This provides a sem-transparent background for the text to sit over */
+    color: white; /* Makes the font color white */
+    width: 100%; /* Ensures the video-text container fils the width of the video */
+    height: 100vh; /* ensures the video-text container fills the height of the viewport so that the slideshow is not partially displayed */
+    padding-top: 2vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
+    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+    -webkit-animation: moveVideoText 5.75s; /* animation for Safari */
+    animation: moveVideoText 5.75s; /* moveVideoText animation set to 5.75s to match the movenavText animation */
 }
 
-@media screen and (max-width: 768px) {
-    .Video_Text {
-        color: black;
-    }
+/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
+@keyframes moveVideoText {
+    from { top: -100vw;} /* This sets the position of the video text to above the viewport */
+    to {top: 0vw;} /* This moves the video text to the normal positioning on the viewport */
 }
+
 
 .Video_Text h1 {
     text-shadow: 2px 1px 1px #55bcc9;
 }
 
-/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
-@keyframes moveVideoText {
-    from {
-        top: -100vw;
-    }
-
-    /* This sets the position of the video text to above the viewport */
-    to {
-        top: 0vw;
-    }
-
-    /* This moves the video text to the normal positioning on the viewport */
-}
 
 /*=======================================================================
     END OF VIDEO STYLING
