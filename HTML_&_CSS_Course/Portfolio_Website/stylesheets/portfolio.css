@@ -3,21 +3,31 @@
 ===============================================*/
 
 /*=== BODY ===*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin: 0%;
-    /* This ensures our site displays all the way to the edge of the browser screen */
+    margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
+    opacity: 1; /* This and transition affect the page loading fade in effect */
+    transition: 3s opacity; /* Causes a 3 second fade in */
+    letter-spacing: 2vw;
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+    overflow-x: none; /* prevents horizontal scroll bar from appearing when the quote is hovered over */
+    user-select: none; /* prevents text on webpage from being highlighted by user */
+}
+
+body.fade-out {
+    opacity: .1; /* sets level of opacity at start of page load */
 }
 
 /*=== Heading 1 elements ===*/
 h1 {
-    text-transform: uppercase;
-    /* Capitalizing all h1 headings */
-    font-family: "Trebuchet MS", Optima;
-    /*Sets the font family of all h1 headings */
-    text-align: center;
-    /* Centering all h1 elements */
-    margin-top: 3%;
-    /* Adds a small margin above h1 elements */
+    text-transform: uppercase; /* Capitalizing all h1 headings */
+    font-family: "Trebuchet MS", Optima; /*Sets the font family of all h1 headings */
+    text-align: center; /* Centering all h1 elements */
+    margin-top: 3%; /* Adds a small margin above h1 elements */
     color: #1a1a1a;
     text-shadow: 2px 2px 3px #fc4445;
 }
