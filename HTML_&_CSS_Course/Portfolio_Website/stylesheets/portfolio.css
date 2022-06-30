@@ -268,6 +268,7 @@ footer {
     top: 50%; /* This ensures no space between the top of the video and the obttom of the page */
     z-index: -1; /* This places the video behind the other elements on the page */
     transform: translate(-50%, -50%);
+    filter: grayscale(90%);
 }
 
 @media (min-aspect-ratio: 16/9) {
