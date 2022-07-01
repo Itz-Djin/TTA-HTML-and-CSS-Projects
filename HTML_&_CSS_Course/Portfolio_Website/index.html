@@ -52,7 +52,7 @@
             <div id="Slideshow_Container">
                 <!-- Slide 1 of 6 -->
                 <div class="mySlides fade">
-                    <img class="Slideshow_Images" src="images/AVTR.jpg">
+                    <img class="Slideshow_Images" src="images/AVTRSquare.jpg">
                     <div class="text">I'm available to assist you on your project!</div>
                 </div>
                 <!-- Slide 2 of 6 -->
@@ -116,8 +116,8 @@
                 I'm also experienced with the technologies JQuery, React, Bootstrap and know my way around GitHub as
                 well as utilizing Git command line commands.
                 <br>
-                <br>I am a full-stack developer and would love to work with you on your project. <a
-                    href="#Contact">Contact</a> me below!
+                <br>I am a full-stack developer and would love to work with you on your project.
+                <a href="#Contact" onclick="openForm()" class="contact">Contact</a> me below!
             </p>
         </div>
     </div>
@@ -139,22 +139,30 @@
         </div>
     </div>
 
-    <!--Contact Section-->
+    <!--Photo ss Section
     <div class="Row" id="Contact">
-        <!--Contact image, left column-->
+        <---My Photography, left column
         <div class="Column_2 Column_tall">
             <img src="images/contact.jpg" alt="Contact_Image">
         </div>
-        <!--Contact form, Right Column-->
-        <div class="Column_1 Column_tall fix">
-            <h1>Contact</h1>
-            <!--This specifies where and how to send the form data; we are leaving it blank-->
-            <form action="https://formspree.io/f/xzbowvqg" method="POST">
-                <!--Here we are utlizing a 3rd party service to submit the contact form data, insert you formspree endpoin in the action attribute-->
-                <label>Name:</label>
+        
+        <--photo reel, right column>
+        <div class="Column_1" Column_tall fix">
+        </div>
+    </div> -->
+
+    <!--Contact form, Right Column-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form class="form-container" action="https://formspree.io/f/xzbowvqg" method="POST"> <!--This specifies where and how to send the form data; we are use a website called formspree to recieve the form-->
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+                <label>Phone:</label>
                 <input type="text" placeholder="Please enter your name here">
                 <label>Email:</label>
-                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                <input type="email" id="Email" name="Email" placeholder="Please enter your email here">
                 <label>Message:</label>
                 <input type="text" id="Message" name="Message" placeholder="Please write your message here">
                 <input type="submit" value="SUBMIT">
