@@ -45,7 +45,7 @@ document.addEventListener("click", function (event) {
     // on any element with the contact class then call the closeForm() function
     if (event.target.matches(".cancel") ||
         !event.target.closest(".form-popup") &&
-        !event.target.closest("Pop_Up_Button") &&
+        !event.target.closest(".Pop_Up_Button") &&
         !event.target.closest(".contact")) {
         closeForm()
     }
