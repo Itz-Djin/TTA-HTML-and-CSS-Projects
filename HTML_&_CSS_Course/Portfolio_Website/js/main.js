@@ -49,4 +49,4 @@ document.addEventListener('click', function (event) {
         !event.target.closest('.contact')) {
         closeForm()
     }
-}, false )
+}, false) 

@@ -398,12 +398,13 @@ footer {
 /*====================================================================
         CONTACT FORM STYLING
 ======================================================================*/
+/* ==Button used to open the contact form - fixed at the bottom of the page */
 .Pop_Up_Button {
-    position: fixed;
-    bottom: 1.75vw;
-    right: 1.75vw;
-    width: 25vw;
-    background-color: white;
+    position: fixed; /* element is positioned relative to the viewport and stays in the same location no matter what */
+    bottom: 1.75vw; /* positions button slightly up from the bottom of the viewport */
+    right: 1.75vw; /* same as above except from thr right side of the viewport */
+    width: 25vw; /* sets width relative to viewport width */
+    background-color: white; 
     color: black;
     border: solid black;
     cursor: pointer;
@@ -411,7 +412,8 @@ footer {
     animation: movePopup 5s;
 }
 
-@keyframes movePopup {
+/* movePopup animation moves button from off the right side of the screen to its fixed location on the viewport */
+@keyframes movePopup { 
     from {right: -40vw;}
     to {right: 1.75vw;}
 }
@@ -421,40 +423,48 @@ footer {
     to {right: 1.75vw;}
 }
 
+/* styling for the contact form */
 .form-popup {
-    z-index: 8;
+    z-index: 8; /* ensures contact form shows above all other elements (the top most stacked) */
 /*    display: none; */
-    position: fixed;
-    bottom: .5vw;
+    position: fixed; /* form stays in fixed location */
+    bottom: .5vw; 
     right: .5vw;
 }
 
+/* form styling */
 .form-container {
-    max-width: 49vw;
-    padding: 1vw;
+    max-width: 49vw; /* relative sizing of the form container - 49% of the viewport width */
+    padding: 1vw; /* adds padding between the form-popup and the form-container */
     background-color:  #55bcc9;
     border: 2px dashed  #fc4445;
 }
 
-.form-container input[type=text] {
-    width: 100%;
-    padding: .75vw;
-    margin: .6vw 0;
-    border: none;
+/* input fields */
+.form-container input[type=text], 
+.form-container input[type=email] {
+    width: 100%; /* input boxes comletely fill the width of form-container */
+    padding: .75vw; /* adds padding to input boxes */
+    margin: .6vw 0; /* addds space between the input boxes and the labels */
+    border: none; 
     background: gainsboro;
-    font-size: 1vw;
+    font-size: 1vw; /* relative font sizing based on the width of the viewport */
+    border-radius: 5px;
 }
 
+/* general styling for all buttons */
 button {
     font-family: "Trebuchet MS", Optima;
-    letter-spacing: .3vw;
-    font-weight: bold;
+    letter-spacing: .3vw; /* adds slight spacing between the letters */
+    font-weight: bold; /* relative sizing of text */
     padding: 1vw;
-    cursor: pointer;
+    cursor: pointer; /* adds padding to text in the button */
     width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
+/* hover effect for contact and submit buttons */
 button:hover,
 .form-container .btn:hover {
     color: white;
@@ -464,19 +474,22 @@ button:hover,
     border-color: silver;
 }
 
+/* submit button */
 .form-container .btn {
     background-color: white;
     color: black;
     border-color: black;
-    margin-bottom: 1vh;
+    margin-bottom: 1vh; /*  */
 }
 
+/* close button */
 .form-container .cancel {
     background-color: black;
     color: white;
     border-color: grey;
 }
 
+/* styling for close button on hover */
 .form-container .cancel:hover {
     color: white;
     background-color: darkred;
