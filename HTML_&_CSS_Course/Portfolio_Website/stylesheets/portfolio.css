@@ -322,6 +322,115 @@ footer {
 /*=======================================================================
     END OF VIDEO STYLING
 =========================================================================*/
+/*=======================================================================
+    SLIDESHOW STYLING 
+=========================================================================*/
+#Slideshow_Bg {
+    background: rgba(255, 255, 255, 0.35); /* Creates slightly transparent white background placed over bg-video */
+}
+
+.mySlides {
+    background-color: #3feee6aa;
+/*    display: none; prevents imgs from being display, used JS to display the imgs*/
+}
+
+#Slideshow_Container {
+    width: 39.5vw; /* relative sizing of the container for the slideshow set to 39.5% of the vw*/
+    height: auto; /*automatically adjusts height of container based on content it is displaying*/
+    padding-top: 4%; /* small padding to top of slideshow container*/
+    position: relative; /* sets container relative to its normal positioning*/
+    margin: auto; /* horizontally centers container on page */
+}
+
+/* remove the underline from the previous and next buttons on slideshow
+#Slideshow_Container a {
+    text-decoration: none;
+}
+*/
+.Slideshow_Images {
+    vertical-align: middle; /* centers imgs vertically within slideshow container*/
+    height: auto; /* Height of images automatically adjusted based on the content, ie: if your images are diff. sizes, they'll display as diff. sizes*/
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75); /* adds shadow around slideshow imgs */
+    width: 100%; /* width of imgs automatically adjusted based upon content */
+}
+
+.Previous,
+.Next {
+    cursor: pointer; /* changes mouse to pointer when hovered over buttons */
+    position: absolute; /* positions next/previous buttons relative to slideshow container */
+    top: 50%; /* moves buttons up in slideshow container */
+    width: auto; /* width of buttons automatically adjust based on content */
+    padding: 2vw; /* adds padding equal to 2% of vw */
+    color: #fc4445; /*  */
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0; /* slightly rounds border on top and bottom right corners */
+    user-select: none; /* disables user from highlighting texts */
+    transition: 0.6s ease; /* specifies details of hover transition for these elements */
+}
+
+.Next {
+    right: 0; /* moves next button to right side of slideshow container */
+    border-radius: 3px 0 0 3px; /* changes b-radius on next button to top and bottom left */
+}
+
+.Previous:hover,
+.Next:hover {
+    background-color: rgba(50, 50, 50, 0.6); /* makes bg of arrows a transparent gray color */
+    color: #3feee6; /* changes arrows color */
+}
+
+.text {
+    color: #3feee6;
+    padding: 1vw;
+    position: absolute; /* positions text within img */
+    bottom: 0; /* sets text at bottom of img */
+    width: 100%; /* element covers full width of the img */
+    text-align: center; /* centers text */
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; /* gives slight spacing between letters */
+    font-size: 1.5vw; /* F-size is relative to the size of the vw */
+    background-color: rgba(0, 0, 0, 0.75); /* slight transparent bg */
+    font-weight: bold;
+    border-radius: 0px 0px 7px 7px; /* rounds corners on bottom left and right */
+}
+
+.dot {
+    cursor: pointer; 
+    height: 1vw; /* dots are size relative to vw */
+    width: 1vw;
+    margin: .25vw; /* spacing between dots */
+    background-color: #fc4445; /* changes color of dots */
+    border-radius: 50%; /* makes dots circles by rounding each corner */
+    display: inline-block; /* allows dots to sit next to eachother rather than on a new line */
+    transition: background-color 0.6s ease; /* when click or hover on dots transition to a different color */
+    z-index: 1;
+}
+
+.active,
+.dot:hover {
+    background-color: #3feee6;
+}
+
+.fade {
+    animation-name: fade; /* fade animation is defined below */
+    animation-duration: 1.5 s; /* animation last 1.5seconds */
+    -webkit-animation-name: fade; /* same as above but for Safari */
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} /* image starts transparent */
+    to {opacity: 1;} /* image ends opaque */
+}
+
+@keyframes fade {
+
+}
+
+/*=======================================================================
+    END SLIDESHOW STYLING 
+=========================================================================*/
 
 /*=======================================================================
     TABLE STYLING - THIS SECTION COVERS THE STYLING OF THE COLUMNS AND ROWS WITHIN THE TABLE
